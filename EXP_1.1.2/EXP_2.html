@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Bank App with advanced financial management">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="color-scheme" content="light dark">
+    <title>FinanceHub - Modern Bank App</title>
+    <link rel="stylesheet" href="EXP_2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="app-wrapper">
+        <div class="bank-container">
+            <!-- Header Section -->
+            <header class="bank-header">
+                <div class="header-content">
+                    <div class="logo">
+                        <span class="logo-icon" aria-label="Bank icon">💳</span>
+                        <div>
+                            <h1>FinanceHub</h1>
+                            <p class="tagline">Manage Your Money Smartly</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Balance Display Card -->
+            <section class="balance-card" aria-label="Account balance">
+                <div class="balance-content">
+                    <div class="balance-info">
+                        <div class="balance-label">Total Balance</div>
+                        <div class="balance-amount" id="balance-amount">$1,000.00</div>
+                    </div>
+                    <div class="balance-visual">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" stroke="url(#grad)" stroke-width="2"/>
+                            <path d="M20 10 L28 25 L12 25 Z" fill="url(#grad)" opacity="0.8"/>
+                            <defs>
+                                <linearGradient id="grad" x1="0" y1="0" x2="40" y2="40">
+                                    <stop offset="0%" stop-color="#818cf8"/>
+                                    <stop offset="100%" stop-color="#6366f1"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="balance-footer">
+                    <small>Available balance</small>
+                </div>
+            </section>
+
+            <!-- Transaction Controls -->
+            <section class="transaction-section" aria-label="Transaction controls">
+                <div class="input-group">
+                    <span class="currency-symbol">$</span>
+                    <input 
+                        type="number" 
+                        id="amount-input" 
+                        class="amount-input"
+                        placeholder="0.00"
+                        min="0.01"
+                        step="0.01"
+                        aria-label="Transaction amount"
+                    >
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-deposit" id="depositBtn" aria-label="Deposit money">
+                        <span class="btn-icon">+</span>
+                        <span>Deposit</span>
+                    </button>
+                    <button class="btn btn-withdraw" id="withdrawBtn" aria-label="Withdraw money">
+                        <span class="btn-icon">−</span>
+                        <span>Withdraw</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Transaction History -->
+            <section class="history-section" aria-label="Transaction history">
+                <div class="history-header">
+                    <h2>Recent Transactions</h2>
+                    <button class="clear-btn" id="clearHistoryBtn" title="Clear history">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6h2"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="transaction-list" id="transactionList">
+                    <p class="empty-state">No transactions yet. Start by depositing or withdrawing money!</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="EXP_2.js"></script>
+</body>
+</html>

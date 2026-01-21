@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="EXP_3.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div class="logo">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+            <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                <stop offset="0%" stop-color="#667eea"/>
+                <stop offset="100%" stop-color="#764ba2"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>AdminHub</span>
+        </div>
+        <h1 class="page-title">Dashboard</h1>
+      </div>
+      <div class="header-right">
+        <div class="search-box">
+          <input type="text" placeholder="Search...">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </div>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <div class="user-menu">
+          <div class="avatar">JD</div>
+          <div class="user-info">
+            <p class="user-name">John Doe</p>
+            <p class="user-role">Admin</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-wrapper">
+      
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar">
+        <nav class="nav-menu">
+          <a href="#" class="nav-item active" data-icon="📊">
+            <span class="icon">📊</span>
+            <span class="label">Analytics</span>
+          </a>
+          <a href="#" class="nav-item" data-icon="👥">
+            <span class="icon">👥</span>
+            <span class="label">Users</span>
+          </a>
+          <a href="#" class="nav-item" data-icon="⚙️">
+            <span class="icon">⚙️</span>
+            <span class="label">Settings</span>
+          </a>
+          <a href="#" class="nav-item" data-icon="📈">
+            <span class="icon">📈</span>
+            <span class="label">Reports</span>
+          </a>
+          <a href="#" class="nav-item" data-icon="💬">
+            <span class="icon">💬</span>
+            <span class="label">Messages</span>
+          </a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="help-box">
+            <p>Need help?</p>
+            <button class="help-btn">Contact Support</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        
+        <!-- Stats Cards -->
+        <section class="stats-section">
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Total Users</h3>
+              <span class="stat-badge positive">+12.5%</span>
+            </div>
+            <div class="stat-value">24,582</div>
+            <div class="stat-chart"></div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Revenue</h3>
+              <span class="stat-badge positive">+8.2%</span>
+            </div>
+            <div class="stat-value">$45,231</div>
+            <div class="stat-chart"></div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Active Sessions</h3>
+              <span class="stat-badge negative">-3.1%</span>
+            </div>
+            <div class="stat-value">1,234</div>
+            <div class="stat-chart"></div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3>Engagement</h3>
+              <span class="stat-badge positive">+5.4%</span>
+            </div>
+            <div class="stat-value">78%</div>
+            <div class="stat-chart"></div>
+          </div>
+        </section>
+
+        <!-- Main Cards Grid -->
+        <section class="cards-section">
+          <div class="card-container">
+            <div class="card analytics-card">
+              <div class="card-header">
+                <h2>Analytics</h2>
+                <div class="card-menu">⋮</div>
+              </div>
+              <div class="card-content">
+                <div class="chart-placeholder">
+                  <svg viewBox="0 0 100 60" preserveAspectRatio="none">
+                    <polyline points="0,40 20,30 40,35 60,15 80,25 100,10" fill="none" stroke="url(#chartGradient)" stroke-width="2"/>
+                    <defs>
+                      <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#667eea"/>
+                        <stop offset="100%" stop-color="#764ba2"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="chart-stats">
+                  <p>Peak traffic: <strong>5,234 users</strong></p>
+                  <p>Avg. session: <strong>12m 34s</strong></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card users-card">
+              <div class="card-header">
+                <h2>Users</h2>
+                <div class="card-menu">⋮</div>
+              </div>
+              <div class="card-content">
+                <div class="user-list">
+                  <div class="user-item">
+                    <div class="user-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">A</div>
+                    <div class="user-details">
+                      <p class="user-name">Alice Johnson</p>
+                      <p class="user-status">Active</p>
+                    </div>
+                    <span class="status-indicator online"></span>
+                  </div>
+                  <div class="user-item">
+                    <div class="user-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">B</div>
+                    <div class="user-details">
+                      <p class="user-name">Bob Smith</p>
+                      <p class="user-status">Idle</p>
+                    </div>
+                    <span class="status-indicator idle"></span>
+                  </div>
+                  <div class="user-item">
+                    <div class="user-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">C</div>
+                    <div class="user-details">
+                      <p class="user-name">Carol Davis</p>
+                      <p class="user-status">Offline</p>
+                    </div>
+                    <span class="status-indicator offline"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card settings-card">
+              <div class="card-header">
+                <h2>Settings</h2>
+                <div class="card-menu">⋮</div>
+              </div>
+              <div class="card-content">
+                <div class="settings-list">
+                  <div class="setting-item">
+                    <label>
+                      <input type="checkbox" checked>
+                      <span>Email Notifications</span>
+                    </label>
+                  </div>
+                  <div class="setting-item">
+                    <label>
+                      <input type="checkbox" checked>
+                      <span>Auto Updates</span>
+                    </label>
+                  </div>
+                  <div class="setting-item">
+                    <label>
+                      <input type="checkbox">
+                      <span>Analytics Tracking</span>
+                    </label>
+                  </div>
+                  <div class="setting-item">
+                    <label>
+                      <input type="checkbox" checked>
+                      <span>Two-Factor Auth</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <script src="EXP_3.js"></script>
+</body>
+</html>

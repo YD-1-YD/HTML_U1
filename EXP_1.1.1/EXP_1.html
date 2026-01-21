@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Student Registration Form with real-time validation">
+    <meta name="theme-color" content="#6366f1">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="EXP_1.css">
+</head>
+<body>
+    <main>
+        <h1>Student Registration Form</h1>
+        
+        <form id="studentForm" novalidate>
+            <!-- Success Message -->
+            <div id="successMessage" class="form-success" style="display: none;">
+                ✓ Registration successful! Welcome aboard!
+            </div>
+
+            <!-- Name Group -->
+            <div class="form-group">
+                <label for="name" class="required">Full Name</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name"
+                    placeholder="John Doe"
+                    required 
+                    minlength="3"
+                    pattern="[A-Za-z\s]{3,}"
+                    autocomplete="name"
+                    aria-label="Full Name"
+                    aria-describedby="nameError">
+                <span class="error" id="nameError" role="alert"></span>
+            </div>
+
+            <!-- Email Group -->
+            <div class="form-group">
+                <label for="email" class="required">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                    autocomplete="email"
+                    aria-label="Email Address"
+                    aria-describedby="emailError">
+                <span class="error" id="emailError" role="alert"></span>
+            </div>
+
+            <!-- Age Group -->
+            <div class="form-group">
+                <label for="age" class="required">Age</label>
+                <input 
+                    type="number" 
+                    id="age" 
+                    name="age"
+                    placeholder="18"
+                    min="18"
+                    max="100"
+                    required
+                    autocomplete="off"
+                    aria-label="Age"
+                    aria-describedby="ageError">
+                <span class="error" id="ageError" role="alert"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" aria-label="Submit registration form">Register Now</button>
+        </form>
+    </main>
+
+    <script src="EXP_1.js"></script>
+</body>
+</html>
