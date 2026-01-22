@@ -13,6 +13,11 @@
         <h1>Student Registration Form</h1>
         
         <form id="studentForm" novalidate>
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+
             <!-- Success Message -->
             <div id="successMessage" class="form-success" style="display: none;">
                 ✓ Registration successful! Welcome aboard!
@@ -68,7 +73,12 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" aria-label="Submit registration form">Register Now</button>
+            <button type="submit" aria-label="Submit registration form">
+                <span class="btn-text">Register Now</span>
+                <span class="btn-loader" style="display: none;">
+                    <span class="loader"></span> Loading...
+                </span>
+            </button>
         </form>
     </main>
 
